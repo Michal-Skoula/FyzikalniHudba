@@ -1,25 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+  /*Sticky note colors - https://community.miro.com/ask-the-community-45/sticky-note-hex-values-7604 */
+  --yellow: #fff9b1;
+  --white: #f5f6f8;
+  --lightorange: #f5d128;
+  --olive: #d0e17a;
+  --green: #d5f692;
+  --pastelblue: #a6ccf5; 
+  --aqua:#67c6c0;
+  --blue: #23bfe7;
+  --orange: #ff9d48;
+  --pink: #ea94bb; 
+  --red: #f16c7f;
+  --purple: #b384bb;
+}
 *{
   margin:0;
   padding:0;
   box-sizing: border-box;
 }
 body{
-  overflow-x: hidden;
-  z-index: -3;
   background-image: url(../assets/images/wood-board-background_low_res.jpg);
   background-size: 100vw, 100vh;
   background-attachment: scroll;
   object-fit: cover;
+  font-family: 'Pacifico', cursive;
 }
-/* .background {
-  width:100vw;  
-  height:100vh;
-  object-fit:cover;
-  z-index: -1;
-  position: sticky;
-  bottom:0;
-  vertical-align: top;
-} */
 .main{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /*Set a max of 4 columns for each screen size*/
@@ -29,29 +36,47 @@ body{
   position: relative;
   place-items: center;
   gap:5em;
-  padding:2em
-  
+  padding:4em;
+  justify-self: center;
+}
+.note2 {
+  grid-area: 1 / 2 / 2 / 4;
+  width: calc(100%);
+  transform: rotate(0deg) !important;
+  top:0 !important;
+  left:0 !important;
+}
+@media screen and (width > 1400px) {
+  .main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  body{
+    background-image: url(../assets/images/wood-board-background_high_res.jpg);
+  }
 }
 .note {
   /* position: absolute; */
   background-color: #FFD952;
   color:black;
   position: relative;
-  width: 60%;
-  height: 60%;
+  display: grid;
+  /* width: 20em;
+  height: 20em; */
   min-width: 200px;
   min-height: 200px;
-  /* top:25%;
-  left:25%; */
   text-align: center;
-  box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.35)
+  box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.35);
+  font-size:2.5em;
+  place-items: center;
+  padding:1em
+}
+a{
+  text-decoration: none;
+  color:#1e1e1e;
+  letter-spacing: 0.03em;
 }
 
-.note3 {
-  top:20%;
-  left:10%;
-  transform: rotate(10deg);
-}
+
 
 /*
 
