@@ -4,36 +4,61 @@
   box-sizing: border-box;
 }
 body{
-  overflow: hidden;
+  overflow-x: hidden;
   z-index: -3;
-}
-.background {
-  width:105vw;  aspect-ratio: 16/9;
-  height:105vh;
+  background-image: url(../assets/images/wood-board-background_low_res.jpg);
+  background-size: 100vw, 100vh;
+  background-attachment: scroll;
   object-fit: cover;
-  z-index: -1;
-  position: absolute;
-  top:0;
-  left:0;
 }
+/* .background {
+  width:100vw;  
+  height:100vh;
+  object-fit:cover;
+  z-index: -1;
+  position: sticky;
+  bottom:0;
+  vertical-align: top;
+} */
 .main{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /*Set a max of 4 columns for each screen size*/
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   place-items: center;
+  gap:5em;
+  padding:2em
+  
 }
 .note {
   /* position: absolute; */
   background-color: #FFD952;
   color:black;
   position: relative;
-  width: 50%;
-  height: 50%;
+  width: 60%;
+  height: 60%;
+  min-width: 200px;
+  min-height: 200px;
   /* top:25%;
   left:25%; */
   text-align: center;
-  vertical-align: ;
+  box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.35)
 }
+
+.note3 {
+  top:20%;
+  left:10%;
+  transform: rotate(10deg);
+}
+
+/*
+
+BACKGROUND SOLUTION:
+
+  background-image: url('pozadi.gif');
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+*/
