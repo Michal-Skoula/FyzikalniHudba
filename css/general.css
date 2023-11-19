@@ -63,20 +63,13 @@ body{
   a:not(.note2) {
     width: 100%;
   }
-  .note:not(.note2) {
-    aspect-ratio: 1/1;
-  }
-  .note2 {
-    aspect-ratio: 3/2;
-  }
-}
 .note {
   background-color: var(--white);
   color:black;
   position: relative;
   display: grid;
-  min-width: 200px;
-  min-height: 200px;
+  min-width: 300px;
+  min-height: 300px;
   text-align: center;
   box-shadow: 2px 4px 4px 3px rgba(0, 0, 0, 0.35);
   font-size:2.5em;
@@ -102,7 +95,7 @@ a{
 video {
   width:100%;
   object-fit: cover;
-  align-content: end;
+  
 }
 
 
