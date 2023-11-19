@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
 
 :root {
   /*Sticky note colors - https://community.miro.com/ask-the-community-45/sticky-note-hex-values-7604 */
@@ -22,45 +23,55 @@
 }
 body{
   background-image: url(../assets/images/wood-board-background_low_res.jpg);
-  /* background-image: url(../assets/images/wooden-texture-4k.jpg); */
+  display: grid;
   background-size: 100%, 100vh;
   background-attachment: scroll;
-  object-fit: cover;
   font-family: 'Pacifico', cursive;
-  overflow-x: hidden;
-}
-.main{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
-  width: 100vw;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   min-height: 100vh;
-  position: relative;
   place-items: center;
   gap:5em;
-  padding:4em;
-  justify-self: center;
+  padding:50px;
 }
+
 .note2 {
-  grid-area: 1 / 2 / 2 / 4;
+  grid-area: 1 / 1 / 2 / 3;
   width: calc(100%);
-  transform: rotate(0deg) !important;
-  top:0 !important;
-  left:0 !important;
-  border: 4px solid black;
+  transform: rotate(0deg);
+  top:0;
+  left:0;
 }
-@media screen and (width > 1400px) {
+@media screen and (width < 700px) {
+  .note2 {
+    grid-area:1 / 1 / 2 / 2;
+  }
+  a {
+    min-width:70%;
+    aspect-ratio: 3/2;
+  }
+  .note {
+    aspect-ratio: 3/2;
+  }
+}
+@media screen and (width > 1200px) {
   .main {
     grid-template-columns: repeat(4, 1fr);
   }
   body{
-    background-image: url(../assets/images/wood-board-background_low_res.jpg);
     background-image: url(../assets/images/wood-board-background_high_res.jpg);
     /* background-image: url(../assets/images/wooden-texture-4k.jpg); */
   }
+  a:not(.note2) {
+    width: 100%;
+  }
+  .note:not(.note2) {
+    aspect-ratio: 1/1;
+  }
+  .note2 {
+    aspect-ratio: 3/2;
+  }
 }
 .note {
-  /* position: absolute; */
   background-color: var(--white);
   color:black;
   position: relative;
@@ -72,18 +83,16 @@ body{
   font-size:2.5em;
   place-items: center;
   padding:1em;
-  transition: filter 200ms ease, transform 200ms ease-in-out;
+  transition: filter 200ms ease, transform 200ms ease-in-out, box-shadow 200ms ease;
 }
 .note:hover {
   transform: scale(105%, 105%);
-  filter:saturate(1.3)
-}
-a:hover {
-  cursor: pointer;
-  text-decoration: underline;
+  filter:saturate(1.5);
+  box-shadow: 3px 7px 7px 5px rgba(0, 0, 0, 0.35);
 }
 a{
   text-decoration: none;
   color:#1e1e1e;
   letter-spacing: 0.03em;
+  min-width: 100%;
 }
