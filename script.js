@@ -28,11 +28,11 @@ function assignRandomValues() {
 
     note.style.transform = `rotate(${randomRotation}deg)`;
     note.style.top = `${randomTop}em`;
-    note.style.left = `${randomLeft}em`;
+    // note.style.left = `${randomLeft}em`;
   });
 }
 
 assignRandomColors();
-assignRandomValues();
+// assignRandomValues();
 
 
