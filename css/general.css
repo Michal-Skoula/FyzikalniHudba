@@ -63,6 +63,7 @@ body{
   a:not(.note2) {
     width: 100%;
   }
+}
 .note {
   background-color: var(--white);
   color:black;
@@ -94,8 +95,5 @@ a{
 }
 video {
   width:100%;
-  object-fit: cover;
-  
+  object-fit: cover; 
 }
-
-
