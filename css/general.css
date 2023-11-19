@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+@import url(notes.css);
 
 :root {
   /*Sticky note colors - https://community.miro.com/ask-the-community-45/sticky-note-hex-values-7604 */
@@ -37,9 +38,7 @@ body{
 .note2 {
   grid-area: 1 / 1 / 2 / 3;
   width: calc(100%);
-  transform: rotate(0deg);
-  top:0;
-  left:0;
+  /* aspect-ratio: 3/2; */
 }
 @media screen and (width < 700px) {
   .note2 {
@@ -95,4 +94,15 @@ a{
   color:#1e1e1e;
   letter-spacing: 0.03em;
   min-width: 100%;
+  /* aspect-ratio: 1/1; */
 }
+.note:not(.note2) {
+  /* aspect-ratio: 1/1; */
+}
+video {
+  width:100%;
+  object-fit: cover;
+  align-content: end;
+}
+
+

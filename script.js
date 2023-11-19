@@ -13,8 +13,6 @@ function assignRandomColors() {
   });
 }
 
-
-
 function assignRandomValues() {
   let notes = document.querySelectorAll('.note');
   notes[1] = '';
