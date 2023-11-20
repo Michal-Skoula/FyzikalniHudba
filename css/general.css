@@ -84,13 +84,17 @@ body{
 }
 a {
   color:#1e1e1e;
+  text-decoration: none;
 }
 a:not(.title){
-  text-decoration: none;
+  
   letter-spacing: 0.03em;
   min-width: 100%;
 }
 video {
   width:100%;
   object-fit: cover; 
+}
+.accent-border {
+  border:4px dotted rgb(56, 56, 56); 
 }

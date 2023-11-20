@@ -6,7 +6,8 @@
   border-radius: 10px;
   font-family:'Open Sans', sans-serif;
   width:100%;
-  margin:4%;
+  margin:3% 40px;
+ 
 }
 h1 {
   font-size:32px;
@@ -31,6 +32,7 @@ li {
 img {
   padding-top:20px;
   width:100%;
+  max-width: 800px;
 }
 .backlink {
   color: rgb(222, 70, 70);

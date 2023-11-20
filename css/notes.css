@@ -60,6 +60,34 @@
   /* top: 1em; */
   /* left: 0.5em; */
   transform: rotate(1deg);
+  position: relative;
+  z-index: 3;
+}
+.note8::after {
+  content: '';
+  background-image: url(../assets/images/mrkev.png);
+  position: absolute;
+  width:50%;
+  aspect-ratio: 200/278;
+  background-size: cover;
+  bottom:-30px;
+  right:-45px;
+  transform: rotate(5deg);
+  border-radius:10px;
+  max-width: 200px;
+  max-height: 278px;
+}
+.note8::before {
+  content: '';
+  background-image: url(../assets/images/pin.png);
+  position: absolute;
+  width:50%;
+  aspect-ratio: 1/1;
+  background-size: cover;
+  transform: rotate(5deg);
+  border-radius:10px;
+  max-width: 200px;
+  max-height: 278px;
 }
 
 .note8:hover {
