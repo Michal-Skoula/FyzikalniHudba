@@ -33,7 +33,7 @@ img {
   width:100%;
 }
 a {
-  color: rgb(222, 70, 70);
+  color: rgb(222, 70, 70) !important;
 }
 @media screen and (width < 700px) {
   #titulky {
