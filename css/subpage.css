@@ -9,6 +9,7 @@ body {
 @media screen and (width < 600px) {
   .board {
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, 30%);
   }
 }
 iframe {
