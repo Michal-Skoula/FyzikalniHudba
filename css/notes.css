@@ -63,7 +63,7 @@
   position: relative;
   z-index: 3;
 }
-.note8::after {
+/* .note8::after {
   content: '';
   background-image: url(../assets/images/mrkev.png);
   position: absolute;
@@ -76,8 +76,8 @@
   border-radius:10px;
   max-width: 200px;
   max-height: 278px;
-}
-.note8::before {
+} */
+/* .note8::before {
   content: '';
   background-image: url(../assets/images/pin.png);
   position: absolute;
@@ -88,7 +88,7 @@
   border-radius:10px;
   max-width: 200px;
   max-height: 278px;
-}
+} */
 
 .note8:hover {
   transform: rotate(1deg) scale(110%);

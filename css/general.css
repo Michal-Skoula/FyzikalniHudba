@@ -98,3 +98,6 @@ video {
 .accent-border {
   border:4px dotted rgb(56, 56, 56); 
 }
+.red {
+  background-color: rgb(222, 70, 70);
+}

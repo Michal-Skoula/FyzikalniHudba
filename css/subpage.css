@@ -1,0 +1,18 @@
+body {
+
+}
+.board {
+  grid-template-columns: 1fr 1fr;
+  overflow-y: scroll;
+  margin: 0 5%;
+}
+@media screen and (width < 600px) {
+  .board {
+    grid-template-columns: 1fr;
+  }
+}
+iframe {
+  width:100%;
+  aspect-ratio: 16/9;
+  border-radius: 20px;
+}
