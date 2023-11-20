@@ -82,9 +82,11 @@ body{
   filter:saturate(1.5);
   box-shadow: 3px 7px 7px 5px rgba(0, 0, 0, 0.35)
 }
+a {
+  color:#1e1e1e;
+}
 a:not(.title){
   text-decoration: none;
-  color:#1e1e1e;
   letter-spacing: 0.03em;
   min-width: 100%;
 }

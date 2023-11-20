@@ -32,8 +32,8 @@ img {
   padding-top:20px;
   width:100%;
 }
-a {
-  color: rgb(222, 70, 70) !important;
+.backlink {
+  color: rgb(222, 70, 70);
 }
 @media screen and (width < 700px) {
   #titulky {
