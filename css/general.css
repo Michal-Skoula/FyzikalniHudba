@@ -100,3 +100,17 @@ video {
 .red {
   background-color: rgb(222, 70, 70);
 }
+.highlight {
+  animation: highlight 4s infinite ease-in-out;
+}
+@keyframes highlight {
+  0% {
+    transform: scale(1.0);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  75% {
+    transform: scale(0.95);
+  }
+}
