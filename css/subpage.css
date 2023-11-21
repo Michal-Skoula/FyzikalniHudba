@@ -1,6 +1,3 @@
-body {
-
-}
 .board {
   grid-template-columns: 1fr 1fr;
   overflow-y: scroll;
@@ -9,11 +6,11 @@ body {
 @media screen and (width < 600px) {
   .board {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fit, 30%);
+    grid-template-rows: repeat(auto-fit, 170px);
   }
 }
 iframe {
+  height:100%;
   width:100%;
-  aspect-ratio: 16/9;
   border-radius: 20px;
 }
