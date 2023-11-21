@@ -43,6 +43,33 @@ body{
   display:grid;
   padding: 10px 0;
 }
+#title::after {
+  content: 'Klikni sem:';
+  position: absolute;
+  top:2px;
+  left:2px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color:rgb(222, 70, 70);
+  /* border: 2px solid rgb(222, 70, 70); */
+  padding:2px;
+  place-self: center;
+  /* animation: highlight2 4s infinite ease-in-out ; */
+  background-color: rgba(222, 70, 70, 0.253);
+}
+#klikejte {
+  position: relative;
+  grid-area: 4 / -3 / 5 / -1;
+  font-size: 25px;
+  letter-spacing: 1px;
+  color:rgb(222, 70, 70);
+  border: 2px solid rgb(222, 70, 70);
+  padding:10px;
+  place-self: center;
+  animation: highlight2 4s infinite ease-in-out ;
+  background-color: rgba(222, 70, 70, 0.253);
+}
+
 .title-heading {
   font-weight: normal;
   font-size:24px;
@@ -112,5 +139,19 @@ video {
   }
   75% {
     transform: scale(0.95);
+  }
+}
+@keyframes highlight2 {
+  0% {
+    transform: scale(1.0) rotate(12deg);
+  }
+  25% {
+    transform: scale(1.05) rotate(12deg);
+  }
+  75% {
+    transform: scale(0.95) rotate(12deg);
+  }
+  100% {
+    transform: rotate(12deg);
   }
 }
