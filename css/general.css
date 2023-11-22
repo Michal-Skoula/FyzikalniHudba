@@ -23,7 +23,6 @@ html {
   background-attachment: scroll;
   display:grid;
   justify-content: center;
-  overflow-y: none;
 }
 *{
   margin:0;
@@ -33,8 +32,7 @@ html {
 body{
   max-width: 1400px;
   font-family: 'Pacifico', cursive;
-  height:100vh;
-  height: calc(100svh - 50px);
+  height: 95svh;
   gap:20px;
   margin:3.5%;
   display:flex;
@@ -113,6 +111,14 @@ body{
     height:100px;
     width:134px;
   }
+  .note {
+    min-height: 20svh;
+  }
+  .green-pin::after, .red-pin::after, .blue-pin::after, .yellow-pin::after {
+    /* width:30% !important;
+    aspect-ratio: 1/1; */
+    
+  }
 }
 .note {
   height:100%;
@@ -129,6 +135,9 @@ body{
 @media screen and (width < 600px) {
   .note {
     font-size:15px;
+  }
+  body {
+    height: 97.5svh;
   }
 }
 .animate-note {
@@ -235,11 +244,11 @@ video {
   position: relative;
 }
 #img1 {
-  top:0%;
+  top:0px;
 }
 #img2 {
-  top:40%;
+  top:60px;
 }
 #img3 {
-  top:15%;
+  top:25px;
 }
