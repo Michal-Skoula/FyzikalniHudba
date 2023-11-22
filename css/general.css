@@ -18,6 +18,12 @@
 }
 html {
   height: 100svh;
+  background-image: url(../assets/images/wood-board-background_low_res.jpg);
+  background-size: 100%, 100%;
+  background-attachment: scroll;
+  display:grid;
+  justify-content: center;
+  overflow-y: none;
 }
 *{
   margin:0;
@@ -25,9 +31,7 @@ html {
   box-sizing: border-box;
 }
 body{
-  background-image: url(../assets/images/wood-board-background_low_res.jpg);
-  background-size: 100%, 100%;
-  background-attachment: scroll;
+  max-width: 1400px;
   font-family: 'Pacifico', cursive;
   height:100vh;
   height: calc(100svh - 50px);
@@ -36,6 +40,7 @@ body{
   display:flex;
   flex-direction: column;
   gap:20px;
+
 }
 
 .title {
@@ -82,27 +87,12 @@ body{
   font-family:'Open Sans', sans-serif;
   font-weight: bold;
 }
-#klikejte {
-  position: relative;
-  grid-area: 4 / -3 / 5 / -1;
-  font-size: 25px;
-  letter-spacing: 1px;
-  color:rgb(222, 70, 70);
-  border: 2px solid rgb(222, 70, 70);
-  padding:10px;
-  place-self: center;
-  animation: highlight2 4s infinite ease-in-out ;
-  background-color: rgba(222, 70, 70, 0.253);
-}
-
 .title-heading {
   font-weight: normal;
   font-size:24px;
   align-self: center;
 }
 .board {
-  /* grid-template-columns: repeat(auto-fit, minmax(300px, 32vw));
-  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr)); */
   grid-template-columns: 1fr 1fr 1fr;
   display: grid;
   gap:4vw;
@@ -234,16 +224,16 @@ video {
 
 .stickys {
   position: relative;
-  grid-area: 4 / -3 / 5 / -1;
+  grid-column: -3 / -1 ;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 .stickys img {
   width:100%;
+  max-width: 300px;
   position: relative;
 }
 #img1 {
-
   top:0%;
 }
 #img2 {
