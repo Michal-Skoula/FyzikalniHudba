@@ -46,19 +46,41 @@ body{
   display:grid;
   padding: 10px 0;
 }
-#title::after {
-  content: 'Klikni sem:';
+#title::before {
+  content: '';
+  background-image: url(../assets/images/arrow.png);
+  background-size:cover;
+  height:54px;
+  width:73px;
+  aspect-ratio: 70/55;
   position: absolute;
   top:2px;
-  left:2px;
+  left:-20px;
   font-size: 12px;
   letter-spacing: 1px;
-  color:rgb(222, 70, 70);
+  text-align: center;
   /* border: 2px solid rgb(222, 70, 70); */
   padding:2px;
   place-self: center;
   /* animation: highlight2 4s infinite ease-in-out ; */
-  background-color: rgba(222, 70, 70, 0.253);
+}
+#title::after {
+  content: 'Klikni:';
+  background-size:contain;
+  position: absolute;
+  text-align: center;
+  margin-left:10px;
+  top:20px;
+  left:-20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding:2px;
+  place-self: center;
+  display:grid;
+  place-items: center;
+  font-family:'Open Sans', sans-serif;
+  font-weight: bold;
 }
 #klikejte {
   position: relative;
@@ -94,15 +116,19 @@ body{
     width:60%;
   }
   #title::after {
-    padding:5px;
+    margin-top:16px;
     font-size:24px;
+  }
+  #title::before {
+    height:100px;
+    width:134px;
   }
 }
 .note {
   height:100%;
   display:grid;
   place-items: center;
-  
+  position: relative;
   max-width: 500px;
   max-height: 500px;
   justify-self: center;
@@ -143,13 +169,86 @@ video {
   background-color: rgb(222, 70, 70);
 }
 .highlight {
-  animation: highlight 3s infinite alternate ease;
+  animation: highlight 2s infinite alternate ease;
 }
 @keyframes highlight {
   0% {
-    transform: scale(0.975);
+    transform: scale(0.96);
   }
   100% {
-    transform: scale(1.025);
+    transform: scale(1.04);
   }
+}
+
+
+/* Decorations */
+
+.blue-pin::after {
+  content: '';
+  background-image: url(../assets/images/pin-blue.png);
+  position: absolute;
+  top:-10px;
+  left:42%;
+  justify-self: center;
+  width:43px;
+  height:43px;
+  background-size: cover;
+  transform: scaleX(-1);
+  
+}
+.red-pin::after {
+  content: '';
+  background-image: url(../assets/images/pin-red.png);
+  position: absolute;
+  top:-10px;
+  left:36%;
+  justify-self: center;
+  width:43px;
+  height:43px;
+  background-size: cover;
+  transform:scaleX(-1) rotate(35deg);
+}
+.green-pin::after {
+  content: '';
+  background-image: url(../assets/images/pin-green.png);
+  position: absolute;
+  top:-10px;
+  left:30%;
+  justify-self: center;
+  width:43px;
+  height:43px;
+  background-size: cover;
+}
+.yellow-pin::after {
+  content: '';
+  background-image: url(../assets/images/pin-yellow.png);
+  position: absolute;
+  top:-10px;
+  left:34%;
+  justify-self: center;
+  width:43px;
+  height:43px;
+  background-size: cover;
+  transform:scaleX(-1) rotate(45deg);
+}
+
+.stickys {
+  position: relative;
+  grid-area: 4 / -3 / 5 / -1;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.stickys img {
+  width:100%;
+  position: relative;
+}
+#img1 {
+
+  top:0%;
+}
+#img2 {
+  top:40%;
+}
+#img3 {
+  top:15%;
 }
