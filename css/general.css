@@ -230,7 +230,8 @@ video {
 }
 .stickys img {
   width:100%;
-  max-width: 300px;
+  max-height: 60%;
+  object-fit: contain;
   position: relative;
 }
 #img1 {
